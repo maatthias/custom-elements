@@ -32,7 +32,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <flow-ref name="componentExample" doc:name="componentExample"/>
       </when>
       <otherwise>
-        <logger message="Could not locate requested path" doc:name="Logger"/>
+        <logger message="#['Could not locate requested path']" doc:name="Log type not found" level="INFO"/>
       </otherwise>
     </choice>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
